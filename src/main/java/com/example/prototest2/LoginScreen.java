@@ -21,14 +21,19 @@ public class LoginScreen {
 
     @FXML
     public void onSignInButtonClick() throws IOException {
-        System.out.println("Test Passed!");
+        //System.out.println("Test Passed!");
         String AccountID = String.valueOf(idearea.getText());
         String AccountPassword = String.valueOf(passarea.getText());
 
         user = getAuthenticatedUser(AccountID, AccountPassword);
 
         if(user != null){
-            System.out.println(user.AccountTypeID);
+            System.out.println("Login Success");
+
+            //ATID.
+            System.out.println("ATID: "+user.AccountTypeID);
+
+
             dispose();
         }else{
             System.out.println("Invalid Pass or ID.");
