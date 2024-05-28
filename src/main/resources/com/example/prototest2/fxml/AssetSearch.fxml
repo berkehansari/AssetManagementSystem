@@ -14,6 +14,7 @@
       <CheckBox fx:id="tangibleCheckBox" layoutX="502.0" layoutY="137.0" mnemonicParsing="false" text="Tangible" />
       <CheckBox fx:id="intangibleCheckBox" layoutX="502.0" layoutY="172.0" mnemonicParsing="false" text="Intangible" />
       <Label layoutX="502.0" layoutY="96.0" prefHeight="25.0" prefWidth="71.0" text="Filter" />
-      <Button layoutX="32.0" layoutY="30.0" mnemonicParsing="false" onAction="#goBack" text="BACK" />
+      <Button fx:id="backButton" layoutX="32.0" layoutY="31.0" mnemonicParsing="false" text="BACK" />
+      <Button fx:id="refreshButton" layoutX="349.0" layoutY="71.0" mnemonicParsing="false" text="REFRESH" />
    </children>
 </AnchorPane>

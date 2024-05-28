@@ -10,6 +10,7 @@ import javafx.scene.control.*;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -38,6 +39,12 @@ public class AssetSearch {
     @FXML
     private Button infoButton;
 
+    @FXML
+    private Button backButton;
+
+    @FXML
+    private Button refreshButton;
+
     private ObservableList<String> dataList = FXCollections.observableArrayList();
 
     @FXML
@@ -59,6 +66,7 @@ public class AssetSearch {
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
             ResultSet resultSet = preparedStatement.executeQuery();
 
+            dataList.clear();
             while (resultSet.next()) {
                 dataList.add(resultSet.getString("AName"));
             }
@@ -122,6 +130,14 @@ public class AssetSearch {
         updateButton.setOnAction(event -> openUpdateAssetForm());
         deleteButton.setOnAction(event -> deleteSelectedAsset());
         infoButton.setOnAction(event -> showAlertIfNoSelection("Info"));
+        backButton.setOnAction(event -> {
+            try {
+                backtoDashboard();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+        refreshButton.setOnAction(event -> loadDataFromDatabase());
     }
 
     private void openUpdateAssetForm() {
@@ -177,6 +193,15 @@ public class AssetSearch {
         }
     }
 
+    private void backtoDashboard() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml/Dashboard.fxml"));
+        Parent parent = loader.load();
+        Scene scene = new Scene(parent);
+
+        Stage stage = (Stage) backButton.getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
 
     private void showAlertIfNoSelection(String action) {
         if (listView.getSelectionModel().getSelectedItem() == null) {
