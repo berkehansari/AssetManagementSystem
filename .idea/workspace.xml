@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc1e20f4-aa15-48e7-b20e-e5fa786ca2f6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/background.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/dashbg.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/prototest2/fxml/AssetAU.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/prototest2/fxml/AssetAU.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/prototest2/fxml/AssetInfo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/prototest2/fxml/AssetInfo.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/prototest2/fxml/AssetSearch.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/prototest2/fxml/AssetSearch.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/prototest2/fxml/Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/prototest2/fxml/Dashboard.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="bc1e20f4-aa15-48e7-b20e-e5fa786ca2f6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -194,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716926391728</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Dashboard created, AssetSearch improvements">
+      <created>1716928148822</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1716928148822</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
