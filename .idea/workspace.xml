@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc1e20f4-aa15-48e7-b20e-e5fa786ca2f6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/prototest2/Asset.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/prototest2/UpdateAssetForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/prototest2/fxml/UpdateAssetForm.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prototest2/AssetAU.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/prototest2/AssetAU.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prototest2/AssetInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/prototest2/AssetInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prototest2/AssetSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/prototest2/AssetSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prototest2/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/prototest2/Dashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prototest2/LoginScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/prototest2/LoginScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/prototest2/fxml/AssetAU.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/prototest2/fxml/AssetAU.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/prototest2/fxml/AssetInfo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/prototest2/fxml/AssetInfo.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/prototest2/fxml/AssetSearch.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/prototest2/fxml/AssetSearch.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/prototest2/fxml/Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/prototest2/fxml/Dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/prototest2/fxml/Dashboard.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -168,14 +163,22 @@
       <option name="project" value="LOCAL" />
       <updated>1716892700848</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Dashboard created, AssetSearch improvements">
+      <created>1716901026885</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716901026885</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="BIM216 Project. Phase 2 / Login Screen added. MySQL connected." />
     <MESSAGE value="workspace.xml changed." />
     <MESSAGE value="LoginScreen adjustments." />
-    <option name="LAST_COMMIT_MESSAGE" value="LoginScreen adjustments." />
+    <MESSAGE value="Dashboard created, AssetSearch improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dashboard created, AssetSearch improvements" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
