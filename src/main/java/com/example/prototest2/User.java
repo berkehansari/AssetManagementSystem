@@ -5,5 +5,7 @@ public class User {
       public String AccountPassword;
       public String AccountTypeID;
 
+      public String AccountUserName;
+
 
 }

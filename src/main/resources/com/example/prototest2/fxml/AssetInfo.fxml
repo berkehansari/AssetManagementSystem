@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.prototest2.AssetInfo"
-            prefHeight="400.0" prefWidth="600.0">
+<VBox alignment="CENTER" spacing="10" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototest2.AssetInfo">
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+    <Label fx:id="nameLabel" text="Name: " />
+    <Label fx:id="quantityLabel" text="Quantity: " />
+    <Label fx:id="typeLabel" text="Type: " />
+    <Label fx:id="reportedLabel" text="Reported: " />
+    <Label fx:id="usernameLabel" text="Account Username: " />
+    <Label fx:id="locationLabel" text="Location: " />
+    <Label fx:id="expenseLabel" text="Expense: " />
+    <Label fx:id="currentValueLabel" text="Current Value: " />
+    <Label fx:id="purchaseValueLabel" text="Purchase Value: " />
+    <Label fx:id="interestLabel" text="Interest: " />
+    <LineChart fx:id="historyChart">
+        <xAxis>
+            <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+            <NumberAxis side="LEFT" />
+        </yAxis>
+    </LineChart>
 
-</AnchorPane>
+
+</VBox>

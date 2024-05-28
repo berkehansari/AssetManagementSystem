@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.prototest2.AssetAU"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<VBox prefHeight="277.0" prefWidth="223.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototest2.AssetAU">
+    <children>
+        <Label text="Asset Name" />
+        <TextField fx:id="assetNameField" prefHeight="25.0" prefWidth="173.0" promptText="Asset Name" />
+        <Label text="Quantity" />
+        <TextField fx:id="assetQuantityField" promptText="Quantity" />
+        <Label text="Type" />
+        <TextField fx:id="assetTypeField" promptText="Type" />
+        <Label text="Reported" />
+        <TextField fx:id="assetReportedField" promptText="Reported" />
+        <Label text="Who is added" />
+        <TextField fx:id="userNameField" promptText="Account User Name" />
+        <Label text="Where is at?" />
+        <TextField fx:id="assetWhereField" promptText="Where" />
+        <Button fx:id="addButton" onAction="#add" text="Save" />
+    </children>
+</VBox>

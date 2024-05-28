@@ -45,7 +45,11 @@ public class AssetSearch {
     @FXML
     private Button refreshButton;
 
+    @FXML
+    private Button addButton;
+
     private ObservableList<String> dataList = FXCollections.observableArrayList();
+
 
     @FXML
     public void initialize() {
@@ -138,6 +142,126 @@ public class AssetSearch {
             }
         });
         refreshButton.setOnAction(event -> loadDataFromDatabase());
+        addButton.setOnAction(event -> {
+            try {
+                add();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+    }
+
+    private void add() throws IOException{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml/AssetAU.fxml"));
+        Parent parent = loader.load();
+
+        Stage stage = new Stage();
+        stage.setTitle("Add Asset");
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setScene(new Scene(parent));
+        stage.showAndWait();
+    }
+
+    private void showAlertIfNoSelection(String action) {
+        String selectedAssetName = listView.getSelectionModel().getSelectedItem();
+        if (selectedAssetName == null) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Warning");
+            alert.setHeaderText(null);
+            alert.setContentText("Please select an asset first.");
+            alert.showAndWait();
+        } else {
+            try {
+                final String DB_URL = "jdbc:mysql://localhost:3306/ams1";
+                final String USERNAME = "root";
+                final String PASSWORD = "Berkehan123!";
+
+                Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
+                String sql = "SELECT * FROM asset WHERE AName = ?";
+                PreparedStatement preparedStatement = conn.prepareStatement(sql);
+                preparedStatement.setString(1, selectedAssetName);
+                ResultSet resultSet = preparedStatement.executeQuery();
+
+                if (resultSet.next()) {
+                    String type = resultSet.getString("AType");
+                    Asset selectedAsset = new Asset(
+                            resultSet.getInt("AUID"),
+                            resultSet.getString("AName"),
+                            resultSet.getInt("AQuantity"),
+                            resultSet.getString("AType"),
+                            resultSet.getString("AReported"),
+                            resultSet.getString("AccountUserName"),
+                            resultSet.getString("AWhere"),
+                            null, // placeholder for expense
+                            0.0,  // placeholder for currentValue
+                            0.0,  // placeholder for purchaseValue
+                            0.0   // placeholder for interest
+                    );
+
+                    // Fetch additional details based on asset type
+                    if ("1".equals(type)) { // Tangible
+                        String sqlTangible = "SELECT * FROM tangibleasset WHERE ANameTangible = ?";
+                        PreparedStatement psTangible = conn.prepareStatement(sqlTangible);
+                        psTangible.setString(1, selectedAssetName);
+                        ResultSet rsTangible = psTangible.executeQuery();
+                        if (rsTangible.next()) {
+                            selectedAsset.setExpense(rsTangible.getString("Expense"));
+                            selectedAsset.setCurrentValue(rsTangible.getDouble("CurrentValue"));
+                            selectedAsset.setPurchaseValue(rsTangible.getDouble("PurchaseValue"));
+                        }
+                        rsTangible.close();
+                        psTangible.close();
+                    } else if ("0".equals(type)) { // Intangible
+                        String sqlIntangible = "SELECT * FROM intangibleasset WHERE ANameIntangible = ?";
+                        PreparedStatement psIntangible = conn.prepareStatement(sqlIntangible);
+                        psIntangible.setString(1, selectedAssetName);
+                        ResultSet rsIntangible = psIntangible.executeQuery();
+                        if (rsIntangible.next()) {
+                            selectedAsset.setCurrentValue(rsIntangible.getDouble("CurrentValue"));
+                            selectedAsset.setPurchaseValue(rsIntangible.getDouble("PurchaseValue"));
+                            selectedAsset.setInterest(rsIntangible.getDouble("Interest"));
+                        }
+                        rsIntangible.close();
+                        psIntangible.close();
+                    }
+
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml/AssetInfo.fxml"));
+                    Parent parent = loader.load();
+
+                    AssetInfo controller = loader.getController();
+                    controller.setAsset(selectedAsset);
+                    controller.loadHistoricalRecords(selectedAssetName, type);
+
+                    Stage stage = new Stage();
+                    stage.setTitle("Asset Information");
+                    stage.initModality(Modality.APPLICATION_MODAL);
+                    stage.setScene(new Scene(parent));
+                    stage.showAndWait();
+                }
+
+                resultSet.close();
+                preparedStatement.close();
+                conn.close();
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        }
+    }
+
+
+
+
+
+
+
+    private void backtoDashboard() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml/Dashboard.fxml"));
+        Parent parent = loader.load();
+        Scene scene = new Scene(parent);
+
+        Stage stage = (Stage) backButton.getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     private void openUpdateAssetForm() {
@@ -161,6 +285,7 @@ public class AssetSearch {
                 ResultSet resultSet = preparedStatement.executeQuery();
 
                 if (resultSet.next()) {
+                    String type = resultSet.getString("AType");
                     Asset selectedAsset = new Asset(
                             resultSet.getInt("AUID"),
                             resultSet.getString("AName"),
@@ -168,8 +293,39 @@ public class AssetSearch {
                             resultSet.getString("AType"),
                             resultSet.getString("AReported"),
                             resultSet.getString("AccountUserName"),
-                            resultSet.getString("AWhere")
+                            resultSet.getString("AWhere"),
+                            null, // placeholder for expense
+                            0.0,  // placeholder for currentValue
+                            0.0,  // placeholder for purchaseValue
+                            0.0   // placeholder for interest
                     );
+
+                    // Fetch additional details based on asset type
+                    if ("1".equals(type)) { // Tangible
+                        String sqlTangible = "SELECT * FROM tangibleasset WHERE ANameTangible = ?";
+                        PreparedStatement psTangible = conn.prepareStatement(sqlTangible);
+                        psTangible.setString(1, selectedAssetName);
+                        ResultSet rsTangible = psTangible.executeQuery();
+                        if (rsTangible.next()) {
+                            selectedAsset.setExpense(rsTangible.getString("Expense"));
+                            selectedAsset.setCurrentValue(rsTangible.getDouble("CurrentValue"));
+                            selectedAsset.setPurchaseValue(rsTangible.getDouble("PurchaseValue"));
+                        }
+                        rsTangible.close();
+                        psTangible.close();
+                    } else if ("0".equals(type)) { // Intangible
+                        String sqlIntangible = "SELECT * FROM intangibleasset WHERE ANameIntangible = ?";
+                        PreparedStatement psIntangible = conn.prepareStatement(sqlIntangible);
+                        psIntangible.setString(1, selectedAssetName);
+                        ResultSet rsIntangible = psIntangible.executeQuery();
+                        if (rsIntangible.next()) {
+                            selectedAsset.setCurrentValue(rsIntangible.getDouble("CurrentValue"));
+                            selectedAsset.setPurchaseValue(rsIntangible.getDouble("PurchaseValue"));
+                            selectedAsset.setInterest(rsIntangible.getDouble("Interest"));
+                        }
+                        rsIntangible.close();
+                        psIntangible.close();
+                    }
 
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml/UpdateAssetForm.fxml"));
                     Parent parent = loader.load();
@@ -193,28 +349,6 @@ public class AssetSearch {
         }
     }
 
-    private void backtoDashboard() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml/Dashboard.fxml"));
-        Parent parent = loader.load();
-        Scene scene = new Scene(parent);
-
-        Stage stage = (Stage) backButton.getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    private void showAlertIfNoSelection(String action) {
-        if (listView.getSelectionModel().getSelectedItem() == null) {
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setTitle("Warning");
-            alert.setHeaderText(null);
-            alert.setContentText("Please select an asset first.");
-            alert.showAndWait();
-        } else {
-            // Perform action for "Update" or "Info"
-            System.out.println(action + " button pressed.");
-        }
-    }
 
     private void deleteSelectedAsset() {
         String selectedAsset = listView.getSelectionModel().getSelectedItem();

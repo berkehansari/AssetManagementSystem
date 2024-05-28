@@ -9,7 +9,12 @@ public class Asset {
     private String AccountUserName;
     private String AWhere;
 
-    public Asset(int AUID, String AName, int AQuantity, String AType, String AReported, String AccountUserName, String AWhere) {
+    private String expense;
+    private double currentValue;
+    private double purchaseValue;
+    private double interest;
+
+    public Asset(int AUID, String AName, int AQuantity, String AType, String AReported, String AccountUserName, String AWhere, String expense, double currentValue, double purchaseValue, double interest) {
         this.AUID = AUID;
         this.AName = AName;
         this.AQuantity = AQuantity;
@@ -17,6 +22,10 @@ public class Asset {
         this.AReported = AReported;
         this.AccountUserName = AccountUserName;
         this.AWhere = AWhere;
+        this.currentValue = currentValue;
+        this.expense = expense;
+        this.purchaseValue = purchaseValue;
+        this.interest = interest;
     }
 
     public int getAUID() {
@@ -47,6 +56,22 @@ public class Asset {
         return AWhere;
     }
 
+    public String getExpense() {
+        return expense;
+    }
+
+    public double getCurrentValue() {
+        return currentValue;
+    }
+
+    public double getPurchaseValue() {
+        return purchaseValue;
+    }
+
+    public double getInterest() {
+        return interest;
+    }
+
     public void setAName(String AName) {
         this.AName = AName;
     }
@@ -69,5 +94,20 @@ public class Asset {
 
     public void setAWhere(String AWhere) {
         this.AWhere = AWhere;
+    }
+
+    public void setCurrentValue(double currentValue) {
+        this.currentValue = currentValue;
+    }
+
+    public void setPurchaseValue(double purchaseValue) {
+        this.purchaseValue = purchaseValue;
+    }
+
+    public void setInterest(double interest) {
+        this.interest = interest;
+    }
+    public void setExpense(String expense) {
+        this.expense = expense;
     }
 }

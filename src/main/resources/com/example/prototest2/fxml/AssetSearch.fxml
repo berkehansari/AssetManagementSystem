@@ -7,7 +7,6 @@
    <children>
       <ListView fx:id="listView" layoutX="32.0" layoutY="94.0" prefHeight="237.0" prefWidth="448.0" />
       <TextField fx:id="searchField" layoutX="32.0" layoutY="71.0" prefHeight="25.0" prefWidth="317.0" promptText="Search..." />
-      <Button layoutX="32.0" layoutY="342.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="71.0" text="ADD" />
       <Button fx:id="updateButton" layoutX="145.0" layoutY="342.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="71.0" text="UPDATE" />
       <Button fx:id="deleteButton" layoutX="256.0" layoutY="342.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="71.0" text="DELETE" />
       <Button fx:id="infoButton" layoutX="504.0" layoutY="342.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="71.0" text="INFO" />
@@ -15,6 +14,7 @@
       <CheckBox fx:id="intangibleCheckBox" layoutX="502.0" layoutY="172.0" mnemonicParsing="false" text="Intangible" />
       <Label layoutX="502.0" layoutY="96.0" prefHeight="25.0" prefWidth="71.0" text="Filter" />
       <Button fx:id="backButton" layoutX="32.0" layoutY="31.0" mnemonicParsing="false" text="BACK" />
+      <Button fx:id="addButton" layoutX="31.0" layoutY="342.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="75.0" text="ADD" />
       <Button fx:id="refreshButton" layoutX="349.0" layoutY="71.0" mnemonicParsing="false" text="REFRESH" />
    </children>
 </AnchorPane>

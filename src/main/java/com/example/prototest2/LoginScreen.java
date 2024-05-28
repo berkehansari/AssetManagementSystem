@@ -79,6 +79,7 @@ public class LoginScreen {
                 user.AccountID = resultSet.getString("AccountID");
                 user.AccountPassword = resultSet.getString("AccountPassword");
                 user.AccountTypeID = resultSet.getString("AccountTypeID");
+                user.AccountUserName = resultSet.getString("AccountUserName");
             }
 
             stmt.close();
