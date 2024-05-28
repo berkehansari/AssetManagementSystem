@@ -3,18 +3,18 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototest2.AssetSearch">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="678.0" prefWidth="1210.0" styleClass="root" stylesheets="@../../../../background.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototest2.AssetSearch">
    <children>
-      <ListView fx:id="listView" layoutX="32.0" layoutY="94.0" prefHeight="237.0" prefWidth="448.0" />
-      <TextField fx:id="searchField" layoutX="32.0" layoutY="71.0" prefHeight="25.0" prefWidth="317.0" promptText="Search..." />
-      <Button fx:id="updateButton" layoutX="145.0" layoutY="342.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="71.0" text="UPDATE" />
-      <Button fx:id="deleteButton" layoutX="256.0" layoutY="342.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="71.0" text="DELETE" />
-      <Button fx:id="infoButton" layoutX="504.0" layoutY="342.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="71.0" text="INFO" />
-      <CheckBox fx:id="tangibleCheckBox" layoutX="502.0" layoutY="137.0" mnemonicParsing="false" text="Tangible" />
-      <CheckBox fx:id="intangibleCheckBox" layoutX="502.0" layoutY="172.0" mnemonicParsing="false" text="Intangible" />
-      <Label layoutX="502.0" layoutY="96.0" prefHeight="25.0" prefWidth="71.0" text="Filter" />
-      <Button fx:id="backButton" layoutX="32.0" layoutY="31.0" mnemonicParsing="false" text="BACK" />
-      <Button fx:id="addButton" layoutX="31.0" layoutY="342.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="75.0" text="ADD" />
-      <Button fx:id="refreshButton" layoutX="349.0" layoutY="71.0" mnemonicParsing="false" text="REFRESH" />
+      <ListView fx:id="listView" layoutX="333.0" layoutY="222.0" prefHeight="237.0" prefWidth="448.0" />
+      <TextField fx:id="searchField" layoutX="333.0" layoutY="199.0" prefHeight="25.0" prefWidth="317.0" promptText="Search..." />
+      <Button fx:id="updateButton" layoutX="446.0" layoutY="470.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="71.0" text="UPDATE" />
+      <Button fx:id="deleteButton" layoutX="557.0" layoutY="470.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="71.0" text="DELETE" />
+      <Button fx:id="infoButton" layoutX="805.0" layoutY="470.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="71.0" text="INFO" />
+      <CheckBox fx:id="tangibleCheckBox" layoutX="803.0" layoutY="265.0" mnemonicParsing="false" text="Tangible" />
+      <CheckBox fx:id="intangibleCheckBox" layoutX="803.0" layoutY="300.0" mnemonicParsing="false" text="Intangible" />
+      <Label layoutX="803.0" layoutY="224.0" prefHeight="25.0" prefWidth="71.0" text="Filter" />
+      <Button fx:id="backButton" layoutX="333.0" layoutY="159.0" mnemonicParsing="false" text="BACK" />
+      <Button fx:id="addButton" layoutX="332.0" layoutY="470.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="75.0" text="ADD" />
+      <Button fx:id="refreshButton" layoutX="650.0" layoutY="199.0" mnemonicParsing="false" text="REFRESH" />
    </children>
 </AnchorPane>

@@ -5,16 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc1e20f4-aa15-48e7-b20e-e5fa786ca2f6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/background.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dashbg.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prototest2/Asset.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/prototest2/Asset.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prototest2/AssetAU.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/prototest2/AssetAU.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prototest2/AssetInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/prototest2/AssetInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prototest2/AssetSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/prototest2/AssetSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prototest2/LoginScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/prototest2/LoginScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prototest2/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/prototest2/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/prototest2/fxml/AssetAU.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/prototest2/fxml/AssetAU.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/prototest2/fxml/AssetInfo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/prototest2/fxml/AssetInfo.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/prototest2/fxml/AssetSearch.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/prototest2/fxml/AssetSearch.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/prototest2/fxml/Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/prototest2/fxml/Dashboard.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +65,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "last_directory_selection": "C:/Users/berks/IdeaProjects/ProtoTest2/src/main/java/com/example/prototest2",
-    "last_opened_file_path": "D:/mysql-connector-j-8.3.0/mysql-connector-j-8.3.0.jar",
+    "last_opened_file_path": "C:/Users/berks/IdeaProjects/ProtoTest2/target",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -77,9 +74,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\berks\IdeaProjects\ProtoTest2\target\classes\com\example\prototest2\fxml" />
+      <recent name="C:\Users\berks\IdeaProjects\ProtoTest2\target" />
+      <recent name="C:\Users\berks\IdeaProjects\ProtoTest2\target\classes\com\example" />
       <recent name="C:\Users\berks\IdeaProjects\ProtoTest2\target\classes\com\example\prototest2" />
-      <recent name="C:\Users\berks\IdeaProjects\ProtoTest2\src\main\resources\com\example\prototest2" />
+      <recent name="C:\Users\berks\IdeaProjects\ProtoTest2\target\generated-sources" />
+      <recent name="C:\Users\berks\IdeaProjects\ProtoTest2\target\classes\com\example\prototest2\fxml" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\berks\IdeaProjects\ProtoTest2\src\main\resources\com\example\prototest2\fxml" />
@@ -188,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716920782019</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Dashboard created, AssetSearch improvements">
+      <created>1716926391728</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1716926391728</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

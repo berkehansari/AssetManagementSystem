@@ -5,21 +5,21 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" spacing="10" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototest2.AssetInfo">
+<VBox alignment="CENTER" spacing="10" styleClass="root" stylesheets="@../../../../background.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototest2.AssetInfo">
     <padding>
         <Insets bottom="10" left="10" right="10" top="10" />
     </padding>
-    <Label fx:id="nameLabel" text="Name: " />
-    <Label fx:id="quantityLabel" text="Quantity: " />
-    <Label fx:id="typeLabel" text="Type: " />
-    <Label fx:id="reportedLabel" text="Reported: " />
-    <Label fx:id="usernameLabel" text="Account Username: " />
-    <Label fx:id="locationLabel" text="Location: " />
-    <Label fx:id="expenseLabel" text="Expense: " />
-    <Label fx:id="currentValueLabel" text="Current Value: " />
-    <Label fx:id="purchaseValueLabel" text="Purchase Value: " />
-    <Label fx:id="interestLabel" text="Interest: " />
-    <LineChart fx:id="historyChart">
+    <Label fx:id="nameLabel" text="Name: " textFill="WHITE" />
+    <Label fx:id="quantityLabel" text="Quantity: " textFill="WHITE" />
+    <Label fx:id="typeLabel" text="Type: " textFill="WHITE" />
+    <Label fx:id="reportedLabel" text="Reported: " textFill="WHITE" />
+    <Label fx:id="usernameLabel" text="Account Username: " textFill="WHITE" />
+    <Label fx:id="locationLabel" text="Location: " textFill="WHITE" />
+    <Label fx:id="expenseLabel" text="Expense: " textFill="WHITE" />
+    <Label fx:id="currentValueLabel" text="Current Value: " textFill="WHITE" />
+    <Label fx:id="purchaseValueLabel" text="Purchase Value: " textFill="WHITE" />
+    <Label fx:id="interestLabel" text="Interest: " textFill="WHITE" />
+    <LineChart fx:id="historyChart" style="-fx-background-color: #ffffff;">
         <xAxis>
             <CategoryAxis side="BOTTOM" />
         </xAxis>

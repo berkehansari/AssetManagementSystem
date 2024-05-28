@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototest2.Dashboard">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="678.0" prefWidth="1210.0" styleClass="root" stylesheets="@../../../../dashbg.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototest2.Dashboard">
    <children>
-      <Button fx:id="signin" layoutX="274.0" layoutY="188.0" mnemonicParsing="false" onAction="#AssetSearch" text="Button" />
-      <Label id="aid" fx:id="aid" layoutX="50.0" layoutY="83.0" text="asd" />
+      <Button fx:id="signin" layoutX="503.0" layoutY="558.0" mnemonicParsing="false" onAction="#AssetSearch" prefHeight="50.0" prefWidth="204.0" style="-fx-background-color: #0070bf;" text="ASSET MANAGEMENT" textAlignment="CENTER" textFill="WHITE"><effect>
+         <Bloom threshold="0.39" />
+      </effect>
+         <font>
+            <Font name="Trebuchet MS Bold" size="16.0" />
+         </font></Button>
+      <Label id="aid" fx:id="aid" layoutX="50.0" layoutY="83.0" />
    </children>
 </AnchorPane>

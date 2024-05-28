@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox prefHeight="277.0" prefWidth="223.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototest2.AssetAU">
+<VBox prefHeight="277.0" prefWidth="223.0" styleClass="root" stylesheets="@../../../../background.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototest2.AssetAU">
     <children>
         <Label text="Asset Name" />
         <TextField fx:id="assetNameField" prefHeight="25.0" prefWidth="173.0" promptText="Asset Name" />
