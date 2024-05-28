@@ -2,7 +2,9 @@ package com.example.prototest2;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -29,11 +31,14 @@ public class LoginScreen {
 
         if(user != null){
             System.out.println("Login Success");
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml/Dashboard.fxml"));
+            Scene scene = new Scene(loader.load());
 
-            FXMLLoader loader = new FXMLLoader();
+            // Get the current stage and set the new scene
+            Stage stage = (Stage) idearea.getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
 
-            loader.setLocation(getClass().getResource("fxml/Dashboard.fxml"));
-            loader.load();
 
             //ATID.
             System.out.println("ATID: "+user.AccountTypeID);

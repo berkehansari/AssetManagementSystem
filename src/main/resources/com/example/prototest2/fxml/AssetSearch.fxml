@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.prototest2.fxml.AssetSearch"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototest2.AssetSearch">
+   <children>
+      <ListView fx:id="listView" layoutX="32.0" layoutY="58.0" prefHeight="273.0" prefWidth="448.0" />
+      <TextField fx:id="searchField" layoutX="32.0" layoutY="33.0" prefHeight="25.0" prefWidth="317.0" promptText="Search..." />
+      <Button layoutX="32.0" layoutY="342.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="71.0" text="ADD" />
+      <Button layoutX="145.0" layoutY="342.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="71.0" text="UPDATE" />
+      <Button layoutX="256.0" layoutY="342.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="71.0" text="DELETE" />
+      <Button layoutX="504.0" layoutY="342.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="71.0" text="INFO" />
+      <CheckBox layoutX="502.0" layoutY="99.0" mnemonicParsing="false" text="CheckBox" />
+      <CheckBox layoutX="502.0" layoutY="134.0" mnemonicParsing="false" text="CheckBox" />
+      <CheckBox layoutX="502.0" layoutY="168.0" mnemonicParsing="false" text="CheckBox" />
+      <CheckBox layoutX="502.0" layoutY="200.0" mnemonicParsing="false" text="CheckBox" />
+   </children>
 </AnchorPane>
