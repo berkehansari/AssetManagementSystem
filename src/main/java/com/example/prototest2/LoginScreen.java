@@ -30,6 +30,11 @@ public class LoginScreen {
         if(user != null){
             System.out.println("Login Success");
 
+            FXMLLoader loader = new FXMLLoader();
+
+            loader.setLocation(getClass().getResource("fxml/Dashboard.fxml"));
+            loader.load();
+
             //ATID.
             System.out.println("ATID: "+user.AccountTypeID);
 
